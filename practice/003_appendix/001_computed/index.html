@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Appendix(1)</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label for="count">現在のinputArrayの入力数: </label>
+        <input type="text" :value="inputCount" ref="count" @change="changeCount">
+      </div>
+      <input type="text" ref="input">
+      <button @click="add">Add</button>
+
+      <ul>
+        <li v-for="(item, i) in inputArray" :key="i">{{ item }}</li>
+      </ul>
+    </div>
+    
+    <script src="../../assets/js/libs/vue.js"></script>
+    <script src="../../assets/js/libs/vuex.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
